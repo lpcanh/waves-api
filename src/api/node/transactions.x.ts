@@ -63,7 +63,7 @@ export const postIssue = createRemapper({
 
 export const sendIssueTx = wrapTxRequest(TX_TYPE_MAP.issue, preIssue, postIssue, (postParams) => {
     return fetch('/assets/broadcast/issue', postParams);
-}/*, true*/) as TTransactionRequest;
+}, true) as TTransactionRequest;
 
 
 /* TRANSFER */
@@ -115,7 +115,7 @@ export const postTransfer = createRemapper({
 
 export const sendTransferTx = wrapTxRequest(TX_TYPE_MAP.transfer, preTransfer, postTransfer, (postParams) => {
     return fetch('/assets/broadcast/transfer', postParams);
-}/*, true*/) as TTransactionRequest;
+}, true) as TTransactionRequest;
 
 
 /* REISSUE */
